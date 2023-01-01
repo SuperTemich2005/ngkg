@@ -5180,7 +5180,7 @@ texture = ExtResource( 5 )
 
 [node name="left_leg_lower" type="Bone2D" parent="Skeleton2D/body/left_leg/left_leg_upper"]
 position = Vector2( -139, -18 )
-rotation = 0.523598
+rotation = 0.523599
 rest = Transform2D( 1, 0, 0, 1, -139, -18 )
 default_length = 125.0
 
@@ -5223,7 +5223,7 @@ texture = ExtResource( 5 )
 
 [node name="right_leg_lower" type="Bone2D" parent="Skeleton2D/body/right_leg/right_leg_upper"]
 position = Vector2( -139, -18 )
-rotation = -0.785397
+rotation = -0.785396
 rest = Transform2D( 1, 0, 0, 1, -139, -18 )
 default_length = 125.0
 

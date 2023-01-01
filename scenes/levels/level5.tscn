@@ -608,7 +608,7 @@ shape = SubResource( 8 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Fin"]
 position = Vector2( -20.5246, -38.1175 )
 frames = SubResource( 9 )
-frame = 2
+frame = 3
 playing = true
 
 [connection signal="ready" from="Enemies" to="Heroes" method="check_enemies"]

@@ -89,14 +89,21 @@ margin_left = 192.0
 margin_top = 512.0
 margin_right = 576.0
 margin_bottom = 576.0
-text = "Новая игра"
+text = "MM_NEWGAME"
 
 [node name="Cont" type="Button" parent="Menu"]
 margin_left = 320.0
 margin_top = 640.0
 margin_right = 704.0
 margin_bottom = 704.0
-text = "Продолжить"
+text = "MM_CONTINUE"
+
+[node name="Lang" type="Button" parent="Menu"]
+margin_left = 448.0
+margin_top = 768.0
+margin_right = 832.0
+margin_bottom = 832.0
+text = "Rus/Eng"
 
 [node name="Label" type="Label" parent="Menu"]
 margin_left = 960.0
@@ -104,8 +111,10 @@ margin_top = 16.0
 margin_right = 1902.0
 margin_bottom = 62.0
 custom_fonts/font = SubResource( 1 )
-text = "Новый Год в Лицее 99 v1.0 © AZIE Games"
+text = "MM_COPYRIGHT
+"
 align = 2
 
 [connection signal="pressed" from="Menu/NewGame" to="." method="_on_NewGame_pressed"]
 [connection signal="pressed" from="Menu/Cont" to="." method="_on_Cont_pressed"]
+[connection signal="pressed" from="Menu/Lang" to="." method="_on_Lang_pressed"]

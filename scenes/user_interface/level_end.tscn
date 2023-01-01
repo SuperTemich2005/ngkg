@@ -22,18 +22,15 @@ color = Color( 0, 0, 0, 1 )
 [node name="Label" type="Label" parent="."]
 margin_right = 1920.0
 margin_bottom = 544.0
-text = "Уровень пройден!
-
-"
+text = "LC_LABEL"
 align = 1
 valign = 1
 
 [node name="FinalScore" type="Label" parent="."]
+margin_top = 64.0
 margin_right = 1920.0
-margin_bottom = 544.0
-text = "
-
-Счёт:"
+margin_bottom = 608.0
+text = "Счёт:"
 align = 1
 valign = 1
 
@@ -42,7 +39,7 @@ margin_left = 808.0
 margin_top = 704.0
 margin_right = 1112.0
 margin_bottom = 768.0
-text = "Продолжить"
+text = "MM_CONTINUE"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )

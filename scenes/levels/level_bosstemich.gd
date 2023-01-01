@@ -7,7 +7,10 @@ var next_level = "res://scenes/levels/cutscene_egorichfinale.tscn"
 
 func _ready():
 	yield(get_parent(),"ready")
-	get_parent().get_node("Heroes").current_character.get_node("CharacterCamera/Control/Objective").text = "Цель: Одолейте Тёмыча"
+	if TranslationServer.get_locale() == "ru":
+		get_parent().get_node("Heroes").current_character.get_node("CharacterCamera/Control/Objective").text = "Цель: Одолейте Тёмыча"
+	else:
+		get_parent().get_node("Heroes").current_character.get_node("CharacterCamera/Control/Objective").text = "Objective: Defeat Temich"
 	get_parent().get_node("Heroes").current_character.get_node("CharacterCamera/Control/CharacterProfiles/Boss").show()
 	get_parent().get_node("Heroes").current_character.get_node("CharacterCamera/Control/CharacterProfiles/Boss/HP/TextValue").text = str(get_parent().get_node("Enemies/Node2D").hp)+"/"+str(get_parent().get_node("Enemies/Node2D").max_hp)
 	get_parent().get_node("Heroes").current_character.get_node("CharacterCamera/Control/CharacterProfiles/Boss/HP").max_value = (get_parent().get_node("Enemies/Node2D").max_hp)

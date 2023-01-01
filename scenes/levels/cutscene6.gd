@@ -1,7 +1,7 @@
 extends Control
 
 
-var dialogue = [
+var dialogue_ru = [
 	{"text": "[color=#ff009900]15 декабря: 220-й"},
 	{"text": "Тёмыч: Титанаванна, я пришел пересдать математику."},
 	{"text": "Титанаванна: Стой. Есть хороший вариант получить 12 по алгебре в году."},
@@ -19,7 +19,30 @@ var dialogue = [
 ]
 
 
+var dialogue_en = [
+	{"text": "[color=#ff009900]December 15th, room 224"},
+	{"text": "Temich: Tatyana Iwanowna, I'm here to retest for algebra"},
+	{"text": "Tatyana Iwanowna: Before you do so, there's an opportunity to get 12/12 for maths this year."},
+	{"text": "Temich: Excuse me, Tatyana Iwanowna. Just so you know, your new year mood is so high that you just offered me 12 for maths.", "anim": ["Temich","kek"]},
+	{"text": "Tatyana Iwanowna: We, teachers, intend to cancel winter holidays. And, on the new year day, we will lower iron curtain around the school, so that schoolars would pay us 200 hrivnyas (or paint cans) for exit"},
+	{"text": "We will raise a lot of money, because everyone wants to spend new year with their parents and loved ones. That being said, we need your help"},
+	{"text": "Tatyana Iwanowna: You must destroy every christmas tree in this school."},
+	{"text": "Temich: And what are you gonna do [color=#ff990000]once[/color] I refuse?", "anim": ["Temich", "rage"]},
+	{"text": "Tatyana Iwanowna: You won't live to pass grade 11.", "anim": ["Temich", "default"]},
+	{"text": "Keyword: you won't.", "anim": ["Temich", "default"]},
+	{"text": "Temich: Sorry, Titanawanna, but I'm a bastard who records classmate street fights and publishes them on YouTube", "anim": ["Temich", "en_garde"]},
+	{"text": "Not a complete moron who does whatever you offered here!", "anim": ["Temich", "en_garde"]},
+	{"text": "Tatyana Iwanowna: [color=#ffff0000]Fatal mistake. I hope you're ready for consequences.", "anim": ["Temich", "en_garde"]},
+	{"out": "res://scenes/user_interface/level_start.tscn"},
+]
+
+
 func _ready():
-	$"/root/Global".level_name = "Уровень 6. Одолейте Титанаванну."
-	$"/root/Global".next_level = "res://scenes/levels/level_bosstitan.tscn"
-	$"/root/Global".instructions = "Она такая же неубиваемая, но за то она не убивает с одного удара."
+	if TranslationServer.get_locale() == "ru":
+		$"/root/Global".level_name = "Уровень 6. Одолейте Титанаванну."
+		$"/root/Global".next_level = "res://scenes/levels/level_bosstitan.tscn"
+		$"/root/Global".instructions = "Она такая же неубиваемая, но за то она не убивает с одного удара."
+	else:
+		$"/root/Global".level_name = "Level 6. Defeat Tatyana Iwanowna."
+		$"/root/Global".next_level = "res://scenes/levels/level_bosstitan.tscn"
+		$"/root/Global".instructions = "This time, she won't one-shot you."

@@ -378,6 +378,7 @@ shape = SubResource( 8 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Fin"]
 position = Vector2( -20.5246, -38.1175 )
 frames = SubResource( 9 )
+frame = 2
 playing = true
 
 [connection signal="timer_out" from="TileMap" to="." method="_on_Fin_body_entered"]

@@ -20,7 +20,7 @@ var jumping = false
 var active = false
 
 # Stats
-var showname = "Супер Тёмыч"
+var showname = tr("CHAR_ST")
 var max_hp = 500
 var hp = max_hp setget set_hp, get_hp
 

@@ -14,7 +14,10 @@ func _ready():
 	savefile.load(OS.get_system_dir(OS.SYSTEM_DIR_DOCUMENTS)+"/AZIE Games/newyear23/savefile.save")
 	savefile.set_value("General","last_cutscene",get_parent().filename)
 	savefile.save(OS.get_system_dir(OS.SYSTEM_DIR_DOCUMENTS)+"/AZIE Games/newyear23/savefile.save")
-	dialogue = get_parent().dialogue
+	if TranslationServer.get_locale() == "ru":
+		dialogue = get_parent().dialogue_ru
+	else:
+		dialogue = get_parent().dialogue_en
 	characters = get_parent().get_node("Characters")
 	_on_Next_pressed()
 

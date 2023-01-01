@@ -2,7 +2,7 @@ extends KinematicBody2D
 signal died
 
 var hp = 30000 setget change_hp, get_hp
-var showname = "Светланфёдрна"
+var showname = tr("CHAR_SWETLAN")
 var speed = 480+55
 var target
 var damage = 150

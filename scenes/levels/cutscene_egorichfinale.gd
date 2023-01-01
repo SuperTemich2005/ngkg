@@ -1,7 +1,7 @@
 extends Control
 
 
-var dialogue = [
+var dialogue_ru = [
 	{"text": "Тёмыч: ВСЁ! Сдаюсь!"},
 	{"text": "Егорыч: Сдавайся, Тьоха, ты поражен и окружен!"},
 	{"text": "Тёмыч: Ля, Егорыч, ирод окаянныЙ, я же говорю, что сдаюсь."},
@@ -19,7 +19,29 @@ var dialogue = [
 ]
 
 
+var dialogue_en = [
+	{"text": "Temich: ENOUGH! I surrender!"},
+	{"text": "Egorich: Surrender, Temich, you're outmatched and outdone"},
+	{"text": "Temich: Ah, you bastard, I said it already: I surrender!"},
+	{"text": "Egorich: What's wrong, Temich, not as impending as you wanted us to believe?", "anim": ["Egorich", "yee"]},
+	{"text": "Temich: Yeah, make fun of me, you deserve it, [color=#ff990000]bastard"},
+	{"text": "Do you think it's nice, fighting my best friend?"},
+	{"text": "(...It's not like it wasn't fun and cool)", "anim": ["Temich", "kek"]},
+	{"text": "Egorich: Huh? Temich, what do you mean?", "anim": ["Egorich", "hmm"]},
+	{"text": "You didn't actually want to cancel new year?"},
+	{"text": "Temich: Egorich, I teamed up with Tatyana Iwanowna, Swetlana Fedorowna [color=#ff990000]AND ANZHELA ANATOLIEWNA!!!", "anim": ["Temich", "rage"]},
+	{"text": "Do you think it's possible to do it (for anybody but Xenia)? Of course I was blackmailed! We all are blackmailed!"},
+	{"text": "Listen closely, for I'm about to tell you what actually happened."},
+	{"out": "res://scenes/user_interface/level_start.tscn"},
+]
+
+
 func _ready():
-	$"/root/Global".level_name = "Уровень 1. Доберитесь до 220-го."
-	$"/root/Global".next_level = "res://scenes/levels/level5.tscn"
-	$"/root/Global".instructions = "Тёмыч не умеет стрелять, за то его посох наносит в 4 раза больше урона, чем рукопашка Егорыча. Удар ближнего боя: Е"
+	if TranslationServer.get_locale() == "ru":
+		$"/root/Global".level_name = "Уровень 1. Доберитесь до 220-го."
+		$"/root/Global".next_level = "res://scenes/levels/level5.tscn"
+		$"/root/Global".instructions = "Тёмыч не умеет стрелять, за то его посох наносит в 4 раза больше урона, чем рукопашка Егорыча. Удар ближнего боя: Е"
+	else:
+		$"/root/Global".level_name = "Level 1. Reach room 224."
+		$"/root/Global".next_level = "res://scenes/levels/level5.tscn"
+		$"/root/Global".instructions = "Temich cannot shoot, but deals 4 times more damage in melee than Egorich. Melee strike: E."

@@ -48,6 +48,6 @@ margin_left = 832.0
 margin_top = 832.0
 margin_right = 1088.0
 margin_bottom = 896.0
-text = "Начать"
+text = "LS_START"
 
 [connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]

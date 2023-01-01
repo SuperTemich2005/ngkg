@@ -19,7 +19,7 @@ var damage = 2
 var jumping = false
 
 # Stats
-var showname = "Тёмыч"
+var showname = tr("CHAR_TEMICH")
 var max_hp = 30
 var hp = max_hp setget set_hp, get_hp
 

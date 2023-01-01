@@ -1,7 +1,7 @@
 extends Control
 
 
-var dialogue = [
+var dialogue_ru = [
 	{"text": "Ольгнасильна: [color=#ffff0000]НЕЕЕЕЕЕЕЕТ! НЕВОЗМОЖНО", "music": "res://sounds/ending.ogg"},
 	{"text": "Ольгнасильна: [color=#ffff0000]КАК ВЫ СМОГЛИ МЕНЯ ОДОЛЕТЬ?!?!?!"},
 	{"text": "Ольгнасильна: [color=#ffff0000]МОИ СИЛЫ УГАСАЮТ"},
@@ -27,6 +27,36 @@ var dialogue = [
 	{"text": "Супер Тёмыч: [color=#ff999900]А, ну и пока я здесь...", "anim": ["Temich", "super_def"]},
 	{"text": "Супер Тёмыч: [color=#ff999900]Пацаны, всех с Новым годом."},
 	{"text": "Супер Тёмыч: [color=#ff999900]Сделано для дискута."},
+	{"out": "res://scenes/user_interface/disclaimer.tscn"}
+]
+
+
+var dialogue_en = [
+	{"text": "Olga Wasiliewna: [color=#ffff0000]NOOOOOOOO! IMPOSSIBLE!", "music": "res://sounds/ending.ogg"},
+	{"text": "[color=#ffff0000]HOW IN THE WORLD DID YOU DO THIS?!?!?!??!??!?!"},
+	{"text": "[color=#ffff0000]MY POWER IS FADING"},
+	{"text": "[color=#ffff0000]I AM NOT CAPABLE OF CANELLING THE NEW YEAR"},
+	{"text": "[color=#ffff0000]THOusANDS DOLLARS OF PROFIT"},
+	{"text": "[color=#ffff0000]MY IMPECCABLE REPUTATION..."},
+	{"text": "[color=#ffff0000]ALL'S GONE."},
+	{"text": "[color=#ffff0000]NO... NO!"},
+	{"text": "[color=#ffff0000]NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO!!!!!!"},
+	{"text": "Super Temich: [color=#ff999900]Sorry, Olga Wasiliewna"},
+	{"text": "[color=#ff999900]But even you cannot cancel NEW YEAR."},
+	{"text": "Super Egorich: [color=#ff999900]By the power of fate, we defend this sacred holiday"},
+	{"text": "[color=#ff999900]By the will of Father Frost, we stop you."},
+	{"text": "Elena Anatoliewna: Holy cow, boys, what happened here?!", "anim": ["Lentoln", "omg"]},
+	{"text": "Super Egorich: [color=#ff999900]Oh, Elena Anatoliewna."},
+	{"text": "[color=#ff999900]We just, uh, you see, umm..."},
+	{"text": "Elena Anatoliewna: Holy pig, Olga Wasiliewna, are you alright?"},
+	{"text": "Olga Wasiliewna: ...'Tis but a scratch."},
+	{"text": "Elena Anatoliewna: A scratch? At your face? HOW IN THE WORLD did it happen?", "anim": ["Lentoln", "hmm"]},
+	{"text": "Super Temich: [color=#ff999900]Elena Anatoliewna, I look like Super Sonic. How can you be so clueless?", "anim": ["Temich", "super_block"]},
+	{"text": "Elena Anatoliewna: Oh, yeah, while you're at it. What's with these clothes? And why is Artem blonde?"},
+	{"text": "Super Egorich: [color=#ff999900]Absolutely zero idea, though it's a nice story to share over a cup of tea."},
+	{"text": "Super Temich: [color=#ff999900]Oh, and before we go...", "anim": ["Temich", "super_def"]},
+	{"text": "[color=#ff999900]Happy new year, mates."},
+	{"text": "[color=#ff999900]Game dedicated to my classmates."},
 	{"out": "res://scenes/user_interface/disclaimer.tscn"}
 ]
 

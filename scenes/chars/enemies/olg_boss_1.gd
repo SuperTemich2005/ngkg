@@ -4,7 +4,7 @@ signal got_damage
 
 var max_hp = 50
 var hp = max_hp setget change_hp, get_hp
-var showname = "Ольгнасильна"
+var showname = tr("CHAR_FINALBOSS")
 var orig_speed = 0
 var speed = orig_speed
 var target

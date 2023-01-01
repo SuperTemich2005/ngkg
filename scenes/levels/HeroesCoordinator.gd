@@ -30,7 +30,7 @@ func update():
 func enemy_slain():
 	print("ded")
 	score += 100
-	HUD.get_node("Score/Score").text = "Очки: "+str(score)
+	HUD.get_node("Score/Score").text = tr("BATTLE_SCORE")+str(score)
 
 
 func check_enemies():

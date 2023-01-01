@@ -7,7 +7,10 @@ var timer = 75
 
 func _ready():
 	yield(get_parent(),"ready")
-	get_parent().get_node("Heroes").current_character.get_node("CharacterCamera/Control/Objective").text = "Цель: Продержитесь 1.25 минуты"
+	if TranslationServer.get_locale() == "ru":
+		get_parent().get_node("Heroes").current_character.get_node("CharacterCamera/Control/Objective").text = "Цель: Продержитесь 1.25 минуты"
+	else:
+		get_parent().get_node("Heroes").current_character.get_node("CharacterCamera/Control/Objective").text = "Objective: Survive 1.25 minutes"
 	var rngesus = RandomNumberGenerator.new()
 	rngesus.seed = OS.get_unix_time()
 	var bgm = rngesus.randi_range(1,2)
@@ -33,7 +36,10 @@ func enemy_slain(): # Mission events coordinator.
 func _on_Second_timeout():
 	timer -= 1
 	if is_instance_valid(get_parent().get_node("Heroes").current_character.get_node("CharacterCamera/Control/Timer")):
-		get_parent().get_node("Heroes").current_character.get_node("CharacterCamera/Control/Timer").text = "Время: "+str(ceil(timer/60))+":"+(str(100+timer%60)).right(1)
+		if TranslationServer.get_locale() == "ru":
+			get_parent().get_node("Heroes").current_character.get_node("CharacterCamera/Control/Timer").text = "Время: "+str(ceil(timer/60))+":"+(str(100+timer%60)).right(1)
+		else:
+			get_parent().get_node("Heroes").current_character.get_node("CharacterCamera/Control/Timer").text = "Time: "+str(ceil(timer/60))+":"+(str(100+timer%60)).right(1)
 	if timer <= 0:
 		$Second.stop()
 		get_parent()._on_Fin_body_entered(get_parent().get_node("Heroes").current_character)

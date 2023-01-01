@@ -7,7 +7,10 @@ var next_level = "res://scenes/levels/cutscene3.tscn"
 
 func _ready():
 	yield(get_parent(),"ready")
-	get_parent().get_node("Heroes").current_character.get_node("CharacterCamera/Control/Objective").text = "Цель: Доберитесь до метода"
+	if TranslationServer.get_locale() == "ru":
+		get_parent().get_node("Heroes").current_character.get_node("CharacterCamera/Control/Objective").text = "Цель: Доберитесь до метода"
+	else:
+		get_parent().get_node("Heroes").current_character.get_node("CharacterCamera/Control/Objective").text = "Objective: Retrieve decorations."
 	var rngesus = RandomNumberGenerator.new()
 	rngesus.seed = OS.get_unix_time()
 	var bgm = rngesus.randi_range(1,2)
@@ -36,4 +39,7 @@ func _on_Box_body_entered(body):
 	get_parent().get_node("Box").queue_free()
 	get_parent().get_node("Fin").position = Vector2(192,208)
 	intensify()
-	get_parent().get_node("Heroes").current_character.get_node("CharacterCamera/Control/Objective").text = "Цель: Вернитесь обратно."
+	if TranslationServer.get_locale() == "ru":
+		get_parent().get_node("Heroes").current_character.get_node("CharacterCamera/Control/Objective").text = "Цель: Возвращайтесь."
+	else:
+		get_parent().get_node("Heroes").current_character.get_node("CharacterCamera/Control/Objective").text = "Objective: Get back."

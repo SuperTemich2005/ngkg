@@ -5,7 +5,7 @@ signal striked
 
 var max_hp = 950
 var hp = max_hp setget change_hp, get_hp
-var showname = "Ольгнасильна"
+var showname = tr("CHAR_FINALBOSS")
 var orig_speed = 600
 var speed = orig_speed
 var target

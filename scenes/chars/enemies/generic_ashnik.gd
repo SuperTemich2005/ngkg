@@ -13,7 +13,7 @@ onready var rngesus = RandomNumberGenerator.new()
 func _ready():
 	rngesus.seed = get_index()
 	hp = rngesus.randi_range(3,10)
-	showname = "Ученик "+str(rngesus.randi_range(5,11))+"-А класса №"+str(rngesus.randi_range(1,31))
+	showname = tr("CHAR_ASHNIK_1")+str(rngesus.randi_range(5,11))+tr("CHAR_ASHNIK_2")+str(rngesus.randi_range(1,31))
 	$Control/ProgressBar.max_value = hp
 	$Control/ProgressBar.value = hp
 	$Control/Label.text = showname

@@ -27,7 +27,7 @@ bbcode_enabled = true
 margin_left = 1600.0
 margin_right = 1888.0
 margin_bottom = 184.0
-text = "Далее"
+text = "DIAG_NEXT"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 

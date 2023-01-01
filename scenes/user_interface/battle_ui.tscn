@@ -42,7 +42,6 @@ margin_bottom = 1064.0
 margin_top = 72.0
 margin_right = 608.0
 margin_bottom = 120.0
-text = "Очки: 0"
 valign = 1
 
 [node name="Objective" type="Label" parent="."]

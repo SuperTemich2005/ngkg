@@ -26,3 +26,10 @@ func _on_NewGame_pressed():
 func _on_Cont_pressed():
 	savefile.load(OS.get_system_dir(OS.SYSTEM_DIR_DOCUMENTS)+"/AZIE Games/newyear23/savefile.save")
 	get_tree().change_scene(savefile.get_value("General","last_cutscene","res://scenes/levels/cutscene1.tscn"))
+
+
+func _on_Lang_pressed():
+	if TranslationServer.get_locale() == "ru":
+		TranslationServer.set_locale("en")
+	else:
+		TranslationServer.set_locale("ru")

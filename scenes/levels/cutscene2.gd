@@ -1,7 +1,7 @@
 extends Control
 
 
-var dialogue = [
+var dialogue_ru = [
 	{"text": "[color=#ff009900]16 декабря: 320-й"},
 	{"text": "Лентольна: О, Егор, привет. Спасибо, что пришел. Мы как раз таки украшаем наш класс, наряжаем вот ёлку."},
 	{"text": "Лентольна: Можешь помочь?"},
@@ -22,7 +22,33 @@ var dialogue = [
 ]
 
 
+var dialogue_en = [
+	{"text": "[color=#ff009900]December 16th: Room 320"},
+	{"text": "Elena Anatolievna: O, hello Egor! We were just about to start decorating our christmas tree."},
+	{"text": "Do you think you could help us?"},
+	{"text": "Egorich: Sure, that's why I'm here", "anim": ["Egorich","yee"]},
+	{"text": "Uh, well, I'm here to help our class, not you yourself.", "anim": ["Egorich","hmm"]},
+	{"text": "Elena Anatolievna: Huh? Why so?", "anim": ["Lentoln","omg"]},
+	{"text": "Egorich: Oh, I guess you already heard about it. Temich smelt too much chemicals that we store in this chemistry lab and now he wants to destroy every christmas tree in school to cancel new year holidays.", "anim": ["Egorich","default"]},
+	{"text": "Elena Anatolievna: What? Why?! I can't carry without winter holidays!", "anim": ["Lentoln","hmm"]},
+	{"text": "Winter holidays is one of those few opportunities when I can take a break from you guys. We can't let that happen!"},
+	{"text": "Egorich: I will stop him, don't worry. Though, I can't find him anywhere..", "anim": ["Egorich","hmm"]},
+	{"text": "Elena Anatolievna: Let's lure him here, so that you can ambush him.", "anim": ["Lentoln","kek"]},
+	{"text": "Egorich: Nice idea, but how?", "anim": ["Egorich","yee"]},
+	{"text": "Elena Anatolievna: Let's decorate this tree so that he goes here.", "anim": ["Lentoln","hmm"]},
+	{"text": "Egorich: Alright. Where are the decorations?", "anim": ["Egorich","hmm"]},
+	{"text": "Elena Anatolievna: They are in a cardboard box. It's quite sturdy, you won't have any troubles carrying it, even in one hand: handles are strong and don't fall apart.", "anim": ["Lentoln","default"]},
+	{"text": "Egorich: Acknowledged. Let's lure him into our trap!", "anim": ["Egorich","yee"]},
+	{"out": "res://scenes/user_interface/level_start.tscn"}
+]
+
+
 func _ready():
-	$"/root/Global".level_name = "Уровень 6. Возьмите ёлочные игрушки из мультимедийного."
-	$"/root/Global".next_level = "res://scenes/levels/level2.tscn"
-	$"/root/Global".instructions = "Прыжок дает вам неуязвимость на одну секунду."
+	if TranslationServer.get_locale() == "en":
+		$"/root/Global".level_name = "Level 6. Take christmas decorations from room 220."
+		$"/root/Global".next_level = "res://scenes/levels/level2.tscn"
+		$"/root/Global".instructions = "Jump grants invincibility for 1 second"
+	else:
+		$"/root/Global".level_name = "Уровень 6. Возьмите ёлочные игрушки из мультимедийного."
+		$"/root/Global".next_level = "res://scenes/levels/level2.tscn"
+		$"/root/Global".instructions = "Прыжок дает вам неуязвимость на одну секунду."

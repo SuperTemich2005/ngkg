@@ -21,7 +21,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="."]
 margin_right = 1920.0
 margin_bottom = 384.0
-text = "Новый год - всьо."
+text = "GO_LABEL"
 align = 1
 valign = 1
 
@@ -39,14 +39,14 @@ margin_left = 832.0
 margin_top = 448.0
 margin_right = 1088.0
 margin_bottom = 512.0
-text = "Заново"
+text = "GO_START"
 
 [node name="Exit" type="Button" parent="."]
 margin_left = 832.0
 margin_top = 576.0
 margin_right = 1088.0
 margin_bottom = 640.0
-text = "Сдаться"
+text = "GO_EXIT"
 
 [connection signal="pressed" from="Restart" to="." method="_on_Restart_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]

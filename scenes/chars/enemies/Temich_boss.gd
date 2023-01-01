@@ -4,7 +4,7 @@ signal damaged
 
 var max_hp = 200
 var hp = max_hp setget change_hp, get_hp
-var showname = "Тёмыч"
+var showname = tr("CHAR_TEMICH")
 var orig_speed = 470
 var speed = orig_speed
 var target

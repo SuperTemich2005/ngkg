@@ -20,7 +20,7 @@ var jumping = false
 var can_shoot = true
 
 # Stats
-var showname = "Егорыч"
+var showname = tr("CHAR_EGORICH")
 var max_hp = 30
 var hp = max_hp setget set_hp, get_hp
 

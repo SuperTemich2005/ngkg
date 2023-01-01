@@ -7,7 +7,10 @@ var next_level = "res://scenes/levels/cutscene2.tscn"
 
 func _ready():
 	yield(get_parent(),"ready")
-	get_parent().get_node("Heroes").current_character.get_node("CharacterCamera/Control/Objective").text = "Цель: Доберитесь до цели"
+	if TranslationServer.get_locale() == "ru":
+		get_parent().get_node("Heroes").current_character.get_node("CharacterCamera/Control/Objective").text = "Цель: Доберитесь до цели"
+	else:
+		get_parent().get_node("Heroes").current_character.get_node("CharacterCamera/Control/Objective").text = "Objective: reach the goal"
 	var rngesus = RandomNumberGenerator.new()
 	rngesus.seed = OS.get_unix_time()
 	var bgm = rngesus.randi_range(1,2)
