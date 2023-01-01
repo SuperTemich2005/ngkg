@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://themes/main.tres" type="Theme" id=1]
+[ext_resource path="res://scenes/user_interface/character_profile.tscn" type="PackedScene" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 944.0 ]
+}
+
+[node name="CharacterProfiles" type="VBoxContainer" parent="."]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 808.0
+margin_bottom = 928.0
+
+[node name="Character1" parent="CharacterProfiles" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 792.0
+margin_bottom = 144.0
+
+[node name="Boss" parent="CharacterProfiles" instance=ExtResource( 2 )]
+visible = false
+modulate = Color( 1, 0, 0, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 148.0
+margin_right = 792.0
+margin_bottom = 292.0
+
+[node name="Score" type="Control" parent="."]
+margin_left = 16.0
+margin_top = 944.0
+margin_right = 592.0
+margin_bottom = 1064.0
+
+[node name="Score" type="Label" parent="Score"]
+margin_top = 72.0
+margin_right = 608.0
+margin_bottom = 120.0
+text = "Очки: 0"
+valign = 1
+
+[node name="Objective" type="Label" parent="."]
+margin_left = 1264.0
+margin_top = 16.0
+margin_right = 1904.0
+margin_bottom = 144.0
+text = "Objective: do not die."
+align = 2
+autowrap = true

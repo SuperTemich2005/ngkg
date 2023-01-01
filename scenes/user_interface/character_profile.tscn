@@ -1,0 +1,133 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://themes/main.tres" type="Theme" id=1]
+[ext_resource path="res://scenes/user_interface/character_profile.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 0 )
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+border_color = Color( 1, 1, 1, 1 )
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 0, 0.831373, 1 )
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color( 0.392157, 0.392157, 0.392157, 0 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1328.0
+margin_bottom = -936.0
+rect_min_size = Vector2( 592, 144 )
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 168.0 ]
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 592.0
+margin_bottom = 144.0
+custom_styles/panel = SubResource( 2 )
+
+[node name="CharacterName" type="Label" parent="."]
+margin_left = 16.0
+margin_top = 8.0
+margin_right = 688.0
+margin_bottom = 72.0
+text = "Character name"
+valign = 1
+
+[node name="HP" type="ProgressBar" parent="."]
+margin_left = 96.0
+margin_top = 80.0
+margin_right = 384.0
+margin_bottom = 112.0
+value = 50.0
+percent_visible = false
+
+[node name="Label" type="Label" parent="HP"]
+margin_left = -80.0
+margin_top = -4.0
+margin_bottom = 42.0
+text = "HP:"
+valign = 1
+
+[node name="TextValue" type="Label" parent="HP"]
+margin_left = 288.0
+margin_top = -4.0
+margin_right = 480.0
+margin_bottom = 42.0
+text = "100/100"
+align = 1
+valign = 1
+
+[node name="Power" type="ProgressBar" parent="."]
+visible = false
+margin_left = 96.0
+margin_top = 128.0
+margin_right = 384.0
+margin_bottom = 160.0
+custom_styles/fg = SubResource( 1 )
+value = 50.0
+percent_visible = false
+
+[node name="Label" type="Label" parent="Power"]
+margin_left = -80.0
+margin_top = -4.0
+margin_bottom = 42.0
+text = "MP:"
+valign = 1
+
+[node name="TextValue" type="Label" parent="Power"]
+margin_left = 288.0
+margin_top = -4.0
+margin_right = 480.0
+margin_bottom = 42.0
+text = "100/100"
+align = 1
+valign = 1
+
+[node name="Skills" type="HBoxContainer" parent="."]
+visible = false
+margin_left = 16.0
+margin_top = 176.0
+margin_right = 576.0
+margin_bottom = 240.0
+custom_constants/separation = 121
+alignment = 1
+
+[node name="Skill1" type="Button" parent="Skills"]
+margin_left = 63.0
+margin_right = 127.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+
+[node name="Skill2" type="Button" parent="Skills"]
+margin_left = 248.0
+margin_right = 312.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+
+[node name="Skill3" type="Button" parent="Skills"]
+margin_left = 433.0
+margin_right = 497.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+
+[node name="Tween" type="Tween" parent="."]

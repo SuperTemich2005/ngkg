@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/titanawanna_defeat.mp3-c11e59597d91719373e15766fc2f4820.mp3str"
+
+[deps]
+
+source_file="res://sounds/titanawanna_defeat.mp3"
+dest_files=[ "res://.import/titanawanna_defeat.mp3-c11e59597d91719373e15766fc2f4820.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://themes/main.tres" type="Theme" id=1]
+[ext_resource path="res://scenes/user_interface/game_over.gd" type="Script" id=2]
+
+[node name="Control" type="Control"]
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_vertical_guides_": [ 960.0 ]
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1920.0
+margin_bottom = 384.0
+text = "Новый год - всьо."
+align = 1
+valign = 1
+
+[node name="Score" type="Label" parent="."]
+margin_right = 1920.0
+margin_bottom = 384.0
+text = "
+
+Счёт:"
+align = 1
+valign = 1
+
+[node name="Restart" type="Button" parent="."]
+margin_left = 832.0
+margin_top = 448.0
+margin_right = 1088.0
+margin_bottom = 512.0
+text = "Заново"
+
+[node name="Exit" type="Button" parent="."]
+margin_left = 832.0
+margin_top = 576.0
+margin_right = 1088.0
+margin_bottom = 640.0
+text = "Сдаться"
+
+[connection signal="pressed" from="Restart" to="." method="_on_Restart_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]

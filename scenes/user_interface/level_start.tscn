@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://themes/main.tres" type="Theme" id=1]
+[ext_resource path="res://scenes/user_interface/level_start.gd" type="Script" id=2]
+[ext_resource path="res://fonts/consola.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 3 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_vertical_guides_": [ 960.0 ]
+}
+
+[node name="BG" type="ColorRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 584.0
+margin_top = 80.0
+margin_right = 1336.0
+margin_bottom = 360.0
+text = "Лябля"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Instructions" type="Label" parent="."]
+margin_left = 64.0
+margin_top = 544.0
+margin_right = 1856.0
+margin_bottom = 824.0
+custom_fonts/font = SubResource( 1 )
+text = "Лябля"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Start" type="Button" parent="."]
+margin_left = 832.0
+margin_top = 832.0
+margin_right = 1088.0
+margin_bottom = 896.0
+text = "Начать"
+
+[connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]

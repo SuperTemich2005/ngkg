@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/olgnasilna.mp3-9239850ae34dd9770c9eb46e6b3cf815.mp3str"
+
+[deps]
+
+source_file="res://sounds/olgnasilna.mp3"
+dest_files=[ "res://.import/olgnasilna.mp3-9239850ae34dd9770c9eb46e6b3cf815.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

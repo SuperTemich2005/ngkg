@@ -1,0 +1,111 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://themes/main.tres" type="Theme" id=1]
+[ext_resource path="res://sprites/game_logo.png" type="Texture" id=2]
+[ext_resource path="res://sprites/aziegameslogo.png" type="Texture" id=3]
+[ext_resource path="res://fonts/consola.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://scenes/user_interface/disclaimer.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 4 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_vertical_guides_": [ 960.0 ]
+}
+
+[node name="Slides" type="Node2D" parent="."]
+visible = false
+
+[node name="1" type="Sprite" parent="Slides"]
+position = Vector2( 960, 512 )
+texture = ExtResource( 3 )
+
+[node name="2" type="Node2D" parent="Slides"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Slides/2"]
+margin_left = 296.0
+margin_top = 32.0
+margin_right = 1624.0
+margin_bottom = 1056.0
+bbcode_enabled = true
+bbcode_text = "[center]Мемному Дискуту
+
+а в частности
+Данычу
+Илонычу
+Ксюхе
+Азазарычу
+Бурбурычу
+Арре №1
+Арре №2
+Вовану
+Ляхе
+Жеке
+Кере
+Всем Саням
+и Егогорычам
+
+та и всем остальным в принципе, кроме Титанаванны
+
+ПОСВЯЩАЕТСЯ
+"
+text = "Мемному Дискуту
+
+а в частности
+Данычу
+Илонычу
+Ксюхе
+Азазарычу
+Бурбурычу
+Арре №1
+Арре №2
+Вовану
+Ляхе
+Жеке
+Кере
+Всем Саням
+и Егогорычам
+
+та и всем остальным в принципе, кроме Титанаванны
+
+ПОСВЯЩАЕТСЯ
+"
+
+[node name="Menu" type="Control" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+
+[node name="GameLogo" type="Sprite" parent="Menu"]
+position = Vector2( 464, 264 )
+texture = ExtResource( 2 )
+
+[node name="NewGame" type="Button" parent="Menu"]
+margin_left = 192.0
+margin_top = 512.0
+margin_right = 576.0
+margin_bottom = 576.0
+text = "Новая игра"
+
+[node name="Cont" type="Button" parent="Menu"]
+margin_left = 320.0
+margin_top = 640.0
+margin_right = 704.0
+margin_bottom = 704.0
+text = "Продолжить"
+
+[node name="Label" type="Label" parent="Menu"]
+margin_left = 960.0
+margin_top = 16.0
+margin_right = 1902.0
+margin_bottom = 62.0
+custom_fonts/font = SubResource( 1 )
+text = "Новый Год в Лицее 99 v1.0 © AZIE Games"
+align = 2
+
+[connection signal="pressed" from="Menu/NewGame" to="." method="_on_NewGame_pressed"]
+[connection signal="pressed" from="Menu/Cont" to="." method="_on_Cont_pressed"]

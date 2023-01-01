@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/taunt2.ogg-69f2d6fd642cb9e3a0a1d81677368ffe.oggstr"
+
+[deps]
+
+source_file="res://sounds/taunt2.ogg"
+dest_files=[ "res://.import/taunt2.ogg-69f2d6fd642cb9e3a0a1d81677368ffe.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

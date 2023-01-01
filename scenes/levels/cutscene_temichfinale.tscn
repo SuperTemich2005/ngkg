@@ -1,0 +1,202 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://scenes/bases/dialogue.tscn" type="PackedScene" id=1]
+[ext_resource path="res://sprites/chars/titanawanna/slider_mimic.png" type="Texture" id=2]
+[ext_resource path="res://scenes/levels/cutscene_temichfinale.gd" type="Script" id=3]
+[ext_resource path="res://sprites/backdrops/backrooms.png" type="Texture" id=4]
+[ext_resource path="res://sprites/chars/temich/rage.png" type="Texture" id=5]
+[ext_resource path="res://sprites/chars/temich/yee.png" type="Texture" id=6]
+[ext_resource path="res://sprites/chars/temich/default.png" type="Texture" id=7]
+[ext_resource path="res://sprites/chars/temich/objection.png" type="Texture" id=8]
+[ext_resource path="res://sprites/chars/temich/en_garde.png" type="Texture" id=9]
+[ext_resource path="res://sounds/titanawanna_defeat.mp3" type="AudioStream" id=10]
+[ext_resource path="res://sprites/chars/generic_ashnik/palette_1.png" type="Texture" id=11]
+[ext_resource path="res://sprites/chars/swetlan/slider_mimic.png" type="Texture" id=12]
+[ext_resource path="res://sprites/chars/anzheln/slider_mimic.png" type="Texture" id=13]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "en_garde",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "kek",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "objection",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "rage",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="BG" type="Sprite" parent="."]
+texture = ExtResource( 4 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="Titan" type="AnimatedSprite" parent="Characters"]
+position = Vector2( 360, 1264 )
+rotation = 0.785397
+scale = Vector2( 4.3097, 4.3097 )
+frames = SubResource( 3 )
+
+[node name="Temich" type="AnimatedSprite" parent="Characters"]
+position = Vector2( 1528, 800 )
+scale = Vector2( 1.33857, 1.33857 )
+frames = SubResource( 4 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Swetlan" type="AnimatedSprite" parent="Characters"]
+position = Vector2( -72.0001, 824 )
+rotation = 0.785397
+scale = Vector2( 4.19103, 4.19103 )
+frames = SubResource( 5 )
+
+[node name="Anzheln" type="AnimatedSprite" parent="Characters"]
+position = Vector2( -32, 1208 )
+rotation = 0.785397
+scale = Vector2( 4.52623, 4.52623 )
+frames = SubResource( 6 )
+
+[node name="Ashnik" type="AnimatedSprite" parent="Characters"]
+rotation = 2.35619
+scale = Vector2( 0.977569, 0.977569 )
+frames = SubResource( 7 )
+
+[node name="Ashnik2" type="AnimatedSprite" parent="Characters"]
+position = Vector2( 336, -24 )
+rotation = 2.35619
+scale = Vector2( 0.977569, 0.977569 )
+frames = SubResource( 7 )
+
+[node name="Ashnik3" type="AnimatedSprite" parent="Characters"]
+position = Vector2( 616, -32 )
+rotation = 2.35619
+scale = Vector2( 0.977569, 0.977569 )
+frames = SubResource( 7 )
+
+[node name="Ashnik4" type="AnimatedSprite" parent="Characters"]
+position = Vector2( 920, -56 )
+rotation = 2.35619
+scale = Vector2( 0.977569, 0.977569 )
+frames = SubResource( 7 )
+
+[node name="Ashnik5" type="AnimatedSprite" parent="Characters"]
+position = Vector2( 1224, -104 )
+rotation = 2.35619
+scale = Vector2( 0.977569, 0.977569 )
+frames = SubResource( 7 )
+
+[node name="Ashnik6" type="AnimatedSprite" parent="Characters"]
+position = Vector2( 1520, -104 )
+rotation = 2.35619
+scale = Vector2( 0.977569, 0.977569 )
+frames = SubResource( 7 )
+
+[node name="Ashnik7" type="AnimatedSprite" parent="Characters"]
+position = Vector2( 1984, 232 )
+rotation = 3.92699
+scale = Vector2( 0.977569, 0.977569 )
+frames = SubResource( 7 )
+
+[node name="Ashnik8" type="AnimatedSprite" parent="Characters"]
+position = Vector2( 2040, 600 )
+rotation = 4.71238
+scale = Vector2( 0.977569, 0.977569 )
+frames = SubResource( 7 )
+
+[node name="Ashnik9" type="AnimatedSprite" parent="Characters"]
+position = Vector2( 1944, 1032 )
+rotation = 5.49778
+scale = Vector2( 0.977569, 0.977569 )
+frames = SubResource( 7 )
+
+[node name="Ashnik10" type="AnimatedSprite" parent="Characters"]
+position = Vector2( 1696, 1136 )
+rotation = 5.49778
+scale = Vector2( 0.977569, 0.977569 )
+frames = SubResource( 7 )
+
+[node name="Ashnik11" type="AnimatedSprite" parent="Characters"]
+position = Vector2( 1496, 1136 )
+rotation = 5.49778
+scale = Vector2( 0.977569, 0.977569 )
+frames = SubResource( 7 )
+
+[node name="Ashnik12" type="AnimatedSprite" parent="Characters"]
+position = Vector2( 1264, 1168 )
+rotation = 5.49778
+scale = Vector2( 0.977569, 0.977569 )
+frames = SubResource( 7 )
+
+[node name="Ashnik13" type="AnimatedSprite" parent="Characters"]
+position = Vector2( 960, 1168 )
+rotation = 5.49778
+scale = Vector2( 0.977569, 0.977569 )
+frames = SubResource( 7 )
+
+[node name="Dialogue" parent="." instance=ExtResource( 1 )]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true

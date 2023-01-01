@@ -1,0 +1,89 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://scenes/bases/dialogue.tscn" type="PackedScene" id=1]
+[ext_resource path="res://sprites/chars/lentoln/hmm_01.png" type="Texture" id=2]
+[ext_resource path="res://scenes/levels/cutscene2.gd" type="Script" id=3]
+[ext_resource path="res://sprites/backdrops/320a.png" type="Texture" id=4]
+[ext_resource path="res://sprites/chars/lentoln/kek_01.png" type="Texture" id=5]
+[ext_resource path="res://sprites/chars/lentoln/omg_01.png" type="Texture" id=6]
+[ext_resource path="res://sprites/chars/lentoln/normal_01.png" type="Texture" id=7]
+[ext_resource path="res://sprites/chars/egorich/default.png" type="Texture" id=8]
+[ext_resource path="res://sprites/chars/egorich/yee.png" type="Texture" id=9]
+[ext_resource path="res://sprites/chars/egorich/confused.png" type="Texture" id=10]
+[ext_resource path="res://sprites/chars/egorich/rage.png" type="Texture" id=11]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "hmm",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "kek",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "omg",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "void",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "hmm",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "rage",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "yee",
+"speed": 5.0
+} ]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="BG" type="Sprite" parent="."]
+position = Vector2( 959.085, 545 )
+scale = Vector2( 1.39231, 1.39231 )
+texture = ExtResource( 4 )
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="Lentoln" type="AnimatedSprite" parent="Characters"]
+position = Vector2( 520, 824 )
+scale = Vector2( 2.3726, 2.3726 )
+frames = SubResource( 3 )
+
+[node name="Egorich" type="AnimatedSprite" parent="Characters"]
+position = Vector2( 1224, 816 )
+scale = Vector2( 2.5379, 2.5379 )
+frames = SubResource( 2 )
+flip_h = true
+
+[node name="Dialogue" parent="." instance=ExtResource( 1 )]
